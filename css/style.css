@@ -6,6 +6,15 @@
     font-family: "Poppins", sans-serif;
 }
 
+/*renkler*/
+:root {
+    --beyaz: #fff;
+    --kirmizi: #ff3333;
+    --acik-kirmizi: #ffffff;
+    --daha-acik-kirmizi: #F55F5FFF;
+}
+
+
 body{
     position: relative;
     min-height: 100vh;
@@ -16,7 +25,7 @@ body{
 .panel{
     height: 100%;
     width: 78px;
-    background: #11101d;
+    background: var(--kirmizi);
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +38,7 @@ body{
 }
 
 .panel .ust .logo{
-    color: #fff;
+    color: var(--beyaz);
     display: flex;
     height: 50px;
     width: 100%;
@@ -54,7 +63,7 @@ body{
     font-weight:400;
 }
 .panel #menubtn{
-    color:#fff;
+    color: var(--beyaz);
     position: absolute;
     left: 50%;
     top: 6px;
@@ -63,6 +72,7 @@ body{
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .panel.aktif #menubtn{
@@ -104,7 +114,8 @@ body{
     height: 35px;
     width: 122px;
     line-height: 35px;
-    background: #fff;
+    background: var(--beyaz);
+    color: var(--kirmizi);
     text-align: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: 0s;
@@ -126,6 +137,10 @@ body{
     display: block;
 }
 
+::placeholder{
+    color: var(--kirmizi);
+}
+
 
 .panel ul li input{
     position: absolute;
@@ -136,28 +151,31 @@ body{
     border-radius: 12px;
     outline: none;
     border: none;
-    background: #1d1b32;
+    background: var(--acik-kirmizi);
     padding-left: 50px;
     font-size: 18px;
-    color: #fff;
+    color: var(--kirmizi);
 }
 
 .panel ul li .bx-search{
     position: absolute;
     z-index: 99;
-    color: #fff;
+    color: var(--kirmizi);
     font-size: 22px;
+    cursor: pointer;
     transition: all 0.5s ease;
 }
 
 .panel ul li .bx-search:hover{
-    background: #fff;
-    color: #1d1b31;
+    background: var(--daha-acik-kirmizi);
+    color: var(--beyaz);
 }
 
 
+
+
 .panel ul li a{
-    color: #fff;
+    color: var(--beyaz);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -167,8 +185,8 @@ body{
 }
 
 .panel ul li a:hover{
-    color: #11101d;
-    background: #fff;
+    color: var(--kirmizi);
+    background: var(--beyaz);
 }
 
 .panel ul li i{
@@ -181,7 +199,7 @@ body{
 
 .panel .alt{
     position: absolute;
-    color: #fff;
+    color: var(--beyaz);
     bottom: 0;
     left: 0;
     width: 100%;
@@ -193,10 +211,6 @@ body{
     height: 60px;
     background: none;
     transition: all 0.4s ease;
-}
-
-.panel.aktif .alt .profil{
-    background: #1d1b31;
 }
 
 .alt .profil .detay{
@@ -237,6 +251,7 @@ body{
     position: absolute;
     left: 50%;
     bottom: 5px;
+    cursor: pointer;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
@@ -244,7 +259,7 @@ body{
     border-radius: 12px;
     text-align: center;
     transition: all 0.4s ease;
-    background: #1d1b31;
+    background: var(--daha-acik-kirmizi);
 }
 
 .panel.aktif .profil #logout{
@@ -265,7 +280,7 @@ body{
 .sayfa .icerik{
     font-size: 25px;
     font-weight: 400;
-    color: #1d1b31;
+    color: var(--daha-acik-kirmizi);
     margin: 12px;
 }
 
