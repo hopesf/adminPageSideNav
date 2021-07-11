@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel{
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.panel.aktif{
+    width: 240px;
+}
+
+.panel .ust .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.panel.aktif .ust .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.ust .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.ust .logo .logoad{
+    font-size: 20px;
+    font-weight:400;
+}
+.panel #menubtn{
+    color:#fff;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.panel.aktif #menubtn{
+    left: 90%;
+}
+
+.panel .link{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.panel.aktif .link{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.panel ul{
+    margin-top: 20px;
+}
+
+.panel ul li{
+    height: 50px;
+    list-style: none;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    line-height: 50px;
+
+}
+
+.panel ul li .tooltip{
+    position: absolute;
+    left:122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    line-height: 35px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.panel.aktif ul li:hover .tooltip{
+    display: none;
+    opacity: 0;
+}
+
+
+.panel ul li:hover .tooltip{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 1;
+    display: block;
+}
+
+
+.panel ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b32;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.panel ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.panel ul li .bx-search:hover{
+    background: #fff;
+    color: #1d1b31;
+}
+
+
+.panel ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.panel ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+
+.panel ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.panel .alt{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.panel .alt .profil{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+
+.panel.aktif .alt .profil{
+    background: #1d1b31;
+}
+
+.alt .profil .detay{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.panel.aktif .profil .detay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.profil .detay img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.detay .isimveis{
+    margin-left: 10px;
+}
+
+.detay .isim{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.detay .is{
+    font-size: 12px;
+}
+
+.profil #logout{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: #1d1b31;
+}
+
+.panel.aktif .profil #logout{
+    left: 88%;
+}
+.panel.aktif .profil #logout{
+    background: none;
+}
+
+
+.sayfa{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+.sayfa .icerik{
+    font-size: 25px;
+    font-weight: 400;
+    color: #1d1b31;
+    margin: 12px;
+}
+
+.panel.aktif ~ .sayfa{
+    width: calc(100% - 240px);
+    left: 240px;
+}
